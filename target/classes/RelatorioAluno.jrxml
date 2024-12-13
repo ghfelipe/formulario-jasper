@@ -1,0 +1,144 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Blank_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77ef3ef0-0e7b-44b5-b948-c9bdfce0bca3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQL Data Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<query language="sql"><![CDATA[select * from   formulario.aluno ]]></query>
+	<field name="ID_aluno" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="ID_aluno"/>
+		<property name="com.jaspersoft.studio.field.label" value="ID_aluno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="aluno"/>
+	</field>
+	<field name="tx_cpf" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tx_cpf"/>
+		<property name="com.jaspersoft.studio.field.label" value="tx_cpf"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="aluno"/>
+	</field>
+	<field name="tx_nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tx_nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="tx_nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="aluno"/>
+	</field>
+	<field name="tx_materia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tx_materia"/>
+		<property name="com.jaspersoft.studio.field.label" value="tx_materia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="aluno"/>
+	</field>
+	<field name="tx_cargahoraria" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="tx_cargahoraria"/>
+		<property name="com.jaspersoft.studio.field.label" value="tx_cargahoraria"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="aluno"/>
+	</field>
+	<variable name="PAGE_HOUR_" resetType="Page" calculation="Sum" class="java.lang.Integer">
+		<expression><![CDATA[$F{tx_cargahoraria}]]></expression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TOTAL_HOUR" calculation="Sum" class="java.lang.Integer">
+		<expression><![CDATA[$F{tx_cargahoraria}]]></expression>
+	</variable>
+	<background splitType="Stretch"/>
+	<title height="100" splitType="Stretch">
+		<element kind="image" uuid="12e21f64-267c-47a7-accc-10c39d313a1f" x="0" y="10" width="190" height="69">
+			<expression><![CDATA["https://portal.virtualvincit.com.br/assets/images/logo/logo.png"]]></expression>
+		</element>
+		<element kind="image" uuid="16dacab3-e15b-4b83-b391-d2fa71a48428" x="450" y="0" width="99" height="100">
+			<expression><![CDATA["https://cdn.qr-code-generator.com/qrcode-preview?background_color=%23ffffff&foreground_color=%23000000&marker_left_inner_color=%23000000&marker_left_outer_color=%23000000&marker_right_inner_color=%23000000&marker_right_outer_color=%23000000&marker_bottom_inner_color=%23000000&marker_bottom_outer_color=%23000000&marker_left_template=version17&marker_right_template=version17&marker_bottom_template=version17&qr_code_pattern=rounded-2&qr_code_logo=account39369185%2Flogo%2F5a6b7647e726c87aa5ca0baca706269c.png&qr_code_text=https%3A%2F%2Fqrco.de%2Fbfd2q5&image_format=PNG&image_width=500&Expires=1734110611&Signature=i~-LTIPmGR~Dcj52vIHOGXYu7aXEkudIZdXd~MEBj~JPOyhSjDGHxN7Iy4uZ5bcUrWBqUFjfisLFv2ja0458gyGKrNEL0GahKkg2T4okJXgNs7i4JYMJK-Jb9E6fB956SG6BUVFrIHRCyq3YWQxCX5zaT1h6yS2PTfpXepjQImKZ0v0KViQTs-ywcezITAsx4XK93fk5Z1VV3PvohFDg-GbH4z1YrT3vJGYJsD9P~wkxk44rDQO0J6Cwhdb36khHyeZrJeynO5wwyrzpa2~H5CtevOzC8gZHnoWIUQWVr6UlcALydbQoa5JgO2L-ktHZYPxDuRSCrA9Tdu~rW3wKfA__&Key-Pair-Id=KKMPOJU8AYATR"]]></expression>
+		</element>
+	</title>
+	<pageHeader height="41">
+		<element kind="staticText" uuid="6392d37e-c950-4390-b236-b67056aa4a22" x="-1" y="0" width="560" height="39" fontSize="20.0" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Relatório de Alunos Faculdade Vincit]]></text>
+		</element>
+		<element kind="line" uuid="46cd0247-3c32-4205-aed1-83e9b9b681c3" x="-1" y="40" width="560" height="1"/>
+	</pageHeader>
+	<columnHeader height="41" splitType="Stretch">
+		<element kind="rectangle" uuid="413dbafd-2490-4487-99fa-2a3c4eda73ca" x="-1" y="10" width="560" height="30" forecolor="#961715" backcolor="#E0E0E0"/>
+		<element kind="staticText" uuid="410e6ee3-87c0-4bad-8ea1-8e7eba04732c" x="58" y="10" width="142" height="30" hTextAlign="Justified" vTextAlign="Middle">
+			<text><![CDATA[NOME]]></text>
+		</element>
+		<element kind="staticText" uuid="988256ef-524b-45ee-a180-fcc305d28d20" x="200" y="10" width="130" height="30" vTextAlign="Middle">
+			<text><![CDATA[CURSO]]></text>
+		</element>
+		<element kind="staticText" uuid="d21998d8-b883-44e1-9824-c56e92ac9303" x="17" y="10" width="40" height="31" vTextAlign="Middle">
+			<text><![CDATA[   ID]]></text>
+		</element>
+		<element kind="staticText" uuid="1b2f8c49-2c39-4c9c-b81f-8909307a9c43" x="330" y="10" width="150" height="31" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[CPF]]></text>
+		</element>
+		<element kind="staticText" uuid="1b9de54e-b68d-49d1-94cb-a5be73f1ccfb" x="480" y="10" width="79" height="31" hTextAlign="Left" vTextAlign="Middle">
+			<text><![CDATA[CARGA HORÁRIA]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="6d53041f-47c9-4b47-af4a-9145805ccf0d" x="-1" y="0" width="58" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{ID_aluno}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c303131-3737-4526-aba0-36d24c86d37d"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="5255608a-fae7-4960-b05e-c0452c5d467c" x="57" y="0" width="142" height="30" vTextAlign="Middle">
+				<expression><![CDATA[$F{tx_nome}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c842cec5-3970-4da7-b4e6-1e0fab416f51"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="aa1cbbb3-734a-4b7a-a630-3a93d1e2995e" x="199" y="0" width="130" height="30" vTextAlign="Middle">
+				<expression><![CDATA[$F{tx_materia}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="35baf9b8-4cc3-48d1-b80c-a747e892dafe"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="a4dc2edb-392a-4cdb-b59c-c09ba12abb5c" x="329" y="0" width="150" height="30" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{tx_cpf}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="00ac5057-64b1-46ff-8aff-6f09c21d5fe1"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="c49fb0e3-f3c1-4304-a826-3df53e05dc24" x="479" y="0" width="80" height="30" vTextAlign="Middle">
+				<expression><![CDATA[$F{tx_cargahoraria}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d897d46-355a-427f-98b0-c68245836369"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="60" splitType="Stretch">
+		<element kind="textField" uuid="d1285e57-2bb5-47e2-bd73-7a227391174f" x="0" y="0" width="100" height="30">
+			<expression><![CDATA["Total de " + $V{PAGE_COUNT} + " Alunos nesta página"]]></expression>
+		</element>
+		<element kind="textField" uuid="4b04bf92-b2e7-46c8-9203-e09e54988c3c" x="460" y="0" width="100" height="30" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[ "Carga horaria da página: " + $V{PAGE_HOUR_}]]></expression>
+		</element>
+		<element kind="textField" uuid="aba26293-a065-4e12-adec-7040e08402eb" x="460" y="30" width="100" height="30" hTextAlign="Center">
+			<expression><![CDATA["Carga horária total: " + $V{TOTAL_HOUR}]]></expression>
+		</element>
+	</columnFooter>
+	<pageFooter height="71" splitType="Stretch">
+		<element kind="image" uuid="5b93f3b6-6a41-440f-bee5-5d785a87872e" x="215" y="1" width="129" height="52">
+			<expression><![CDATA["https://uniciv.unimestre.com//arquivo/cliente/imagens/pic_logo_inst.png"]]></expression>
+		</element>
+		<element kind="staticText" uuid="b26f170e-fafa-4714-807f-964a59502fb4" x="215" y="53" width="129" height="18" hTextAlign="Center">
+			<text><![CDATA[www.faculdadevincit.edu.br]]></text>
+		</element>
+		<element kind="textField" uuid="8ffff342-adaf-4645-a73e-865f481f44c6" x="420" y="40" width="100" height="30" hTextAlign="Right">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="645c9013-7d05-4f60-bac5-c024c4127e7e" x="520" y="40" width="100" height="30" evaluationTime="Report" hTextAlign="Left">
+			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="87cbe22e-c836-4440-99c3-fb682c46c00a" x="0" y="40" width="58" height="30" pattern="HH:mm">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="textField" uuid="cc20c0ef-d0c3-4261-97c4-a722ae7f091e" x="0" y="1" width="100" height="30" pattern="MMMMM dd, yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

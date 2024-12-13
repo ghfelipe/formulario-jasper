@@ -1,0 +1,16 @@
+spring:
+  application.name: formulario
+  datasource:
+    url: "jdbc:mysql://localhost:3306/formulario"
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+    username: "root"
+    password: "Gug@2004"
+  jpa:
+    open-in-view: false
+    hibernate:
+      #      default_schema: formulario
+      ddl-auto: update
+      #         properties:
+      #         hibernate:
+      #       dialect: org.hibernate.dialect.MySQLDialect
+      show-sql: false
